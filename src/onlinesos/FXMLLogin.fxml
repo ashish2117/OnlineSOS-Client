@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="453.0" prefWidth="421.0" style="-fx-background-color: transparency;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onlinesos.FXMLLoginController">
+   <children>
+      <AnchorPane layoutX="70.0" layoutY="81.0" prefHeight="453.0" prefWidth="421.0" style="-fx-background-color: #3D4956;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="54.0" layoutY="177.0" prefHeight="141.0" prefWidth="313.0">
+               <children>
+                  <TextField fx:id="username" onMouseClicked="#onTextFieldCliclk" promptText="Username" style="-fx-border-color: white;">
+                     <VBox.margin>
+                        <Insets top="4.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <PasswordField fx:id="password" onMouseClicked="#onTextFieldCliclk" promptText="Password" style="-fx-border-color: white;">
+                     <VBox.margin>
+                        <Insets top="4.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <JFXButton fx:id="signInButton" onAction="#onSignInClick" onMouseEntered="#onMouseEnter" onMouseExited="#onMouseExit" prefHeight="25.0" prefWidth="317.0" style="-fx-border-color: white;" text="Sign In" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="4.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="openSignUp" onAction="#onOpenSignUp" onMouseEntered="#onMouseEnter" onMouseExited="#onMouseExit" prefHeight="25.0" prefWidth="314.0" style="-fx-border-color: white;" text="New User? Sign Up!" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="4.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Label fx:id="errorLabel" prefHeight="17.0" prefWidth="315.0" text="Some Error!" textFill="ORANGERED" />
+               </children>
+            </VBox>
+            <Label layoutX="102.0" layoutY="104.0" prefHeight="35.0" prefWidth="201.0" text="Welcome Backk!" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="exit" layoutX="292.0" layoutY="375.0" onAction="#onExitButtonClick" onMouseEntered="#onMouseEnter" onMouseExited="#onMouseExit" prefHeight="27.0" prefWidth="75.0" style="-fx-border-color: white;" text="Exit" textFill="WHITE" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="387.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

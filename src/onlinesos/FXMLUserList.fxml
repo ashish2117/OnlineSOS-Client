@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" prefHeight="387.0" prefWidth="421.0" style="-fx-background-color: #3D4956;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onlinesos.FXMLUserListController">
+   <children>
+       <AnchorPane prefHeight="24.0" prefWidth="322.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+     <children>
+       <TextField fx:id="searchBar" onAction="#onSearchBarAction" prefWidth="200.0" promptText="Search..." style="-fx-border-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0" />
+            <ImageView fitHeight="20.0" fitWidth="23.0" layoutX="393.0" layoutY="9.0" onMouseClicked="#onSearchBarImageClick" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="34.0">
+               <image>
+                  <Image url="@images/search_black_20.png" />
+               </image>
+            </ImageView>
+            <JFXCheckBox fx:id="onlineCheckBox" checkedColor="ORANGERED" layoutX="5.0" layoutY="6.0" onMouseClicked="#onOnlineCheckBoxClick" selected="true" text="Online" textFill="WHITE" unCheckedColor="WHITE" />
+            <JFXCheckBox fx:id="allCheckBox" checkedColor="ORANGERED" layoutX="260.0" layoutY="6.0" onMouseClicked="#onAllCheckBoxClick" text="All" textFill="WHITE" unCheckedColor="WHITE" />
+            <JFXCheckBox fx:id="offlineCheckBox" checkedColor="ORANGERED" layoutX="133.0" layoutY="6.0" onMouseClicked="#onOfflineCheckBoxClick" text="Offline" textFill="WHITE" unCheckedColor="WHITE" />
+     </children>
+   </AnchorPane>
+      
+      <JFXListView fx:id="userListt" cellVerticalMargin="2.0" layoutX="87.0" layoutY="-18.0" onMouseEntered="#listEnter" onMouseExited="#listExit" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="60.0" />
+      <JFXButton fx:id="selectUserButton" disable="true" layoutX="5.0" layoutY="352.0" onAction="#onSelectUserButtonClick" onMouseEntered="#onButtonEnter" onMouseExited="#onButtonExit" prefHeight="27.0" prefWidth="129.0" ripplerFill="WHITE" style="-fx-border-color: white;" text="Select User" textFill="WHITE" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="357.0" />
+      <JFXButton fx:id="exitButton" layoutX="228.0" layoutY="352.0" onAction="#onExitButtonClick" onMouseEntered="#onButtonEnter" onMouseExited="#onButtonExit" prefHeight="27.0" prefWidth="129.0" ripplerFill="WHITE" style="-fx-border-color: white;" text="Exit" textFill="WHITE" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="357.0" />
+      <JFXButton fx:id="goOfflineButton" layoutX="146.0" layoutY="357.0" onAction="#onGoOfflineButtonClick" onMouseEntered="#onButtonEnter" onMouseExited="#onButtonExit" prefHeight="27.0" prefWidth="129.0" ripplerFill="WHITE" style="-fx-border-color: white;" text="Go Back" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="146.0" />
+   </children>
+</AnchorPane>

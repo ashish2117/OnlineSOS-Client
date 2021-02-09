@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="variablePane" prefHeight="387.0" prefWidth="421.0" style="-fx-background-color: #3D4956;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onlinesos.FXMLSelectionPageController">
+   <children>
+      <TextField fx:id="player1Nick" layoutX="59.0" layoutY="78.0" prefHeight="25.0" prefWidth="303.0" promptText="Enter Your Nickname" style="-fx-border-radius: 0; -fx-border-color: #ffffff;" AnchorPane.topAnchor="240.0" />
+      <VBox layoutX="59.0" layoutY="133.0" prefHeight="101.0" prefWidth="303.0" style="-fx-border-color: #ffffff;" AnchorPane.bottomAnchor="190.0">
+         <children>
+            <JFXRadioButton fx:id="offline" onAction="#handleOfflineClick" selectedColor="#FF4500" text="Offline Multiplayer" textFill="WHITE" unSelectedColor="ffffff">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="30.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="online" onAction="#handleOnlineClick" selectedColor="#FF4500" text="Online Multiplayer" textFill="WHITE" unSelectedColor="ffffff">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" right="10.0" top="15.0" />
+               </VBox.margin>
+            </JFXRadioButton>
+         </children>
+      </VBox>
+      <TextField fx:id="player2Nick" layoutX="59.0" layoutY="259.0" prefHeight="25.0" prefWidth="303.0" promptText="Enter Friend's Nickname" style="-fx-border-radius: 0; -fx-border-color: #ffffff;" AnchorPane.topAnchor="290.0" />
+      <JFXButton fx:id="mainButton" layoutX="203.0" layoutY="323.0" onAction="#handleMainButtonClick" onMouseEntered="#handleButtonEnter" onMouseExited="#handleButtonExit" prefWidth="129.0" ripplerFill="WHITE" style="-fx-border-color: #ffffff;" text="Search" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="146.0" />
+      <JFXButton fx:id="exit" layoutX="310.0" layoutY="360.0" onAction="#handleExitButtonClick" onMouseEntered="#handleExitButtonEnter" onMouseExited="#handleExitButtonExit" prefWidth="129.0" ripplerFill="WHITE" style="-fx-border-color: #ffffff;" text="Exit" textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="6.0" />
+      <Label fx:id="recInvitLabel" layoutX="15.0" layoutY="217.0" prefHeight="17.0" prefWidth="123.0" text="Received Invitations :" textFill="WHITE" AnchorPane.bottomAnchor="163.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="293.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ListView fx:id="invitationList" layoutX="70.0" layoutY="167.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="225.0" />
+      <AnchorPane fx:id="messagePane" layoutX="25.0" layoutY="14.0" prefHeight="128.0" prefWidth="371.0" style="-fx-background-color: #3D4956; -fx-border-color: #ffffff;" AnchorPane.topAnchor="120.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Error!" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="message" layoutX="38.0" layoutY="47.0" text="Label" textFill="WHITE" />
+            <JFXButton fx:id="okayButton" layoutX="310.0" layoutY="87.0" onAction="#handleOkayButtonClick" onMouseEntered="#handleOkayButtonEnter" onMouseExited="#handleOkayButtonExit" ripplerFill="WHITE" style="-fx-border-color: #ffffff;" text="OK" textFill="WHITE" />
+         </children></AnchorPane>
+      <ImageView fx:id="leftImage" fitHeight="50.0" fitWidth="50.0" layoutX="100.0" layoutY="-36.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="133.0" AnchorPane.topAnchor="25.0">
+         <image>
+            <Image url="@images/empty_s_orange_70.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="centerImage" fitHeight="50.0" fitWidth="50.0" layoutX="168.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="25.0">
+         <image>
+            <Image url="@images/empty_o_white_70.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rightImage" fitHeight="50.0" fitWidth="50.0" layoutX="238.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="25.0">
+         <image>
+            <Image url="@images/empty_s_orange_70.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="selectUserButton" disable="true" layoutX="14.0" layoutY="357.0" onAction="#onSelectUserButtonClick" onMouseEntered="#handleSelectButtonEnter" onMouseExited="#handleSelectButtonExit" prefWidth="129.0" ripplerFill="WHITE" style="-fx-border-color: #ffffff;" text="Select User" textFill="WHITE" AnchorPane.leftAnchor="6.0" />
+   </children>
+</AnchorPane>

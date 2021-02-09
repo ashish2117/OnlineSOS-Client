@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="453.0" prefWidth="421.0" style="-fx-background-color: transparency;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="onlinesos.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="57.0" prefWidth="421.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <HBox prefHeight="57.0" prefWidth="421.0" AnchorPane.bottomAnchor="0.0">
+               <children>
+                  <ImageView fx:id="game" fitHeight="43.0" fitWidth="105.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/game_orange.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="7.0" left="20.0" right="20.0" top="7.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="person" fitHeight="43.0" fitWidth="105.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/person.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="7.0" left="20.0" right="20.0" top="7.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="settings" fitHeight="43.0" fitWidth="105.0" layoutX="115.0" layoutY="10.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/settings.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="7.0" left="20.0" right="20.0" top="7.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="stat" fitHeight="43.0" fitWidth="105.0" layoutX="220.0" layoutY="10.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/off_white_43.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="7.0" left="20.0" right="20.0" top="7.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="dock" fitHeight="43.0" fitWidth="43.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/up.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="7.0" left="20.0" right="20.0" top="7.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="variablePane" prefHeight="387.0" prefWidth="421.0" AnchorPane.topAnchor="66.0" />
+   </children>
+</AnchorPane>
